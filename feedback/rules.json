@@ -1,0 +1,8 @@
+{
+  "version": 1,
+  "prefixes": [
+    "Invariant:",
+    "Transaction ID:"
+  ],
+  "developmentDigest": "a501bbedd1d565068f77b9411df356e7de1d75169df8def00042a7f59d7a6e9c"
+}

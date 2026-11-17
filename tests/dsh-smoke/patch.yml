@@ -1,0 +1,5 @@
+- id: llm-deepseek
+  disabled: true
+- insert:
+    - id: abcdg-free-dsh-smoke
+      name: "__SIEVE_SMOKE_DRIVER__"

@@ -1,0 +1,14 @@
+{
+  "frozenAt": "2026-11-17T06:44:29.130Z",
+  "sha256": {
+    "cases.json": "1dbc678d86102893322a10004bfa9176539f3d6e84b35d2e65457f0fb91bde99",
+    "evaluation-only/answers.json": "f292bb06d4c8148d8726ff69b662f1b96cd681d282ea098321ac376c6f28a833",
+    "fixture-hashes.json": "78f68092e06adfb2ae1bd0a69dda145403426c447fccc4dbf252e96b1335b5c8",
+    "implementation-fingerprint.json": "c00d1695109fbd450985efbc337b8a48fbeb82b46f4ac70de478165b549ce999",
+    "plan.json": "ef4aad15f8608473564097840fe2911e54b3aa7c3b67b2d37360c6b66d72435a",
+    "probe.mjs": "8f2b99d4ad7b479cb0b5ab3131ae5cf31cb96e1502dda8e06ee7f27bcb2a72d6",
+    "run.mjs": "dedded3e268f90f1c8d76843b07ab9c8cb0c2a66e45b6a512c2ab8d261aee906",
+    "ABCD.patch.yml": "e9bf54de379e14eee3bbac0f139421554f9d24e3f71c669812cbd6b19806faee",
+    "ABCDG.patch.yml": "d7c1f8093125ff8fe4a5a8c0bc19e36134a46c57c170dd78fa4062a8972a7963"
+  }
+}

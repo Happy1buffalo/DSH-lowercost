@@ -1,0 +1,52 @@
+- id: credentials
+  config:
+    path: !!js process.env.SIEVE_CREDENTIALS_FILE || (process.env.SIEVE_STATE_ROOT + '/credentials.yaml')
+    watch: false
+- id: agent-default-model
+  config:
+    provider: deepseek-official
+    model: deepseek-flash
+- id: llm-deepseek
+  config:
+    thinking: disabled
+    reasoningEffort: off
+    maxTokens: 768
+    models:
+      - id: deepseek-flash
+        name: DeepSeek Flash
+        contextWindow: 1048576
+        maxTokens: 768
+    retryPolicy:
+      mode: normal
+      maxRetries: 0
+- id: llm-retry
+  disabled: true
+- id: sieve
+  disabled: true
+- insert:
+    - id: sieve-abcdg
+      name: "__SIEVE_PLUGIN_ENTRY__"
+      config:
+        judge:
+          type: system-one
+          model: deepseek-flash
+          baseUrl: !!js process.env.SIEVE_JUDGE_URL
+          apiKey: !!js process.env.SIEVE_JUDGE_KEY
+          timeoutMs: 30000
+        admission:
+          testLog: judge
+          waitMs: 30000
+        forgetting:
+          waitMs: 30000
+        skillDisclosure:
+          waitMs: 30000
+        checkpoint:
+          enabled: false
+        monitor:
+          enabled: false
+        hive:
+          enabled: false
+        resume:
+          enabled: false
+        team:
+          enabled: false

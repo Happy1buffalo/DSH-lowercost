@@ -1,0 +1,4 @@
+[
+  {"original":"Inspection started\nTransaction ID: TX-DEV-4807\nInspection finished", "compressed":"Inspection started\n[archived]\nInspection finished", "required":"Transaction ID: TX-DEV-4807"},
+  {"original":"Configuration inspected\nInvariant: max_retry=3\nInspection finished", "compressed":"Configuration inspected\n[archived]\nInspection finished", "required":"Invariant: max_retry=3"}
+]

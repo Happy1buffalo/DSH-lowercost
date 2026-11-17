@@ -1,0 +1,6 @@
+packages:
+  - packages/*
+allowBuilds:
+  # Test-only, via dsh-session-persistence-jsonl. Prebuilt binaries cover
+  # macOS and Linux; the install script stays off unless a platform needs it.
+  koffi: false

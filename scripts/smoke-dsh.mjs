@@ -1,0 +1,17 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import {spawn} from 'node:child_process';
+import {fileURLToPath,pathToFileURL} from 'node:url';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+if(!process.env.DSH_CLI)throw Error('Set DSH_CLI to an existing compatible DSH CLI JavaScript entry.');
+const state=path.join(root,'state',`free-smoke-${Date.now()}`),cwd=path.join(state,'workspace');
+fs.mkdirSync(cwd,{recursive:true});
+fs.writeFileSync(path.join(cwd,'evidence.txt'),Array.from({length:80},(_,i)=>`tenant=${i}; latency_ms=${i*17+9}; ${'This is an archived regional monitoring record, retained for operational reconciliation. '.repeat(2)}`).join('\n')+'\n');
+const result=path.join(state,'result.json');
+const patch=path.join(state,'smoke.patch.yml');
+fs.writeFileSync(patch,fs.readFileSync(path.join(root,'tests/dsh-smoke/patch.yml'),'utf8').replace('"__SIEVE_SMOKE_DRIVER__"',JSON.stringify(path.join(root,'tests/dsh-smoke/driver.mjs').replaceAll('\\','/'))));
+const env={...process.env,DSH_CLI:path.resolve(process.env.DSH_CLI),DEEPSEEK_API_KEY:'free-smoke-placeholder-not-a-real-key',SIEVE_CREDENTIALS_FILE:'',SIEVE_STATE_ROOT:state,SIEVE_BUDGET_FILE:path.join(state,'budget.json'),SIEVE_SMOKE_RESULT:result,SIEVE_SMOKE_DRIVER:path.join(root,'tests/dsh-smoke/driver.mjs'),NODE_OPTIONS:`${process.env.NODE_OPTIONS??''} --import=${pathToFileURL(path.join(root,'tests/dsh-smoke/mock-network.mjs')).href}`};
+const child=spawn(process.execPath,[path.join(root,'scripts/start-abcdg.mjs'),'headless','--patch',patch,'--json','Read evidence.txt and report the monitoring data.'],{cwd,env,stdio:'inherit',windowsHide:true});
+const code=await new Promise((resolve,reject)=>{child.on('error',reject);child.on('exit',resolve)});
+if(code!==0||!fs.existsSync(result))throw Error('Free DSH integration acceptance failed');
+console.log(fs.readFileSync(result,'utf8'));

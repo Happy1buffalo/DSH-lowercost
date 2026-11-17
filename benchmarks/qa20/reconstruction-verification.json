@@ -1,0 +1,199 @@
+{
+  "checkedAt": "2026-11-17T06:50:03.784Z",
+  "completedQuestions": 20,
+  "allPassed": true,
+  "results": [
+    {
+      "id": "q01",
+      "eligible": true,
+      "gCompressedTools": 1,
+      "checks": [
+        {
+          "tool": 1,
+          "restoredExactly": true,
+          "archivedAllLines": true
+        }
+      ]
+    },
+    {
+      "id": "q02",
+      "eligible": true,
+      "gCompressedTools": 1,
+      "checks": [
+        {
+          "tool": 1,
+          "restoredExactly": true,
+          "archivedAllLines": true
+        }
+      ]
+    },
+    {
+      "id": "q03",
+      "eligible": true,
+      "gCompressedTools": 1,
+      "checks": [
+        {
+          "tool": 1,
+          "restoredExactly": true,
+          "archivedAllLines": true
+        }
+      ]
+    },
+    {
+      "id": "q04",
+      "eligible": true,
+      "gCompressedTools": 1,
+      "checks": [
+        {
+          "tool": 1,
+          "restoredExactly": true,
+          "archivedAllLines": true
+        }
+      ]
+    },
+    {
+      "id": "q05",
+      "eligible": true,
+      "gCompressedTools": 1,
+      "checks": [
+        {
+          "tool": 1,
+          "restoredExactly": true,
+          "archivedAllLines": true
+        }
+      ]
+    },
+    {
+      "id": "q06",
+      "eligible": true,
+      "gCompressedTools": 1,
+      "checks": [
+        {
+          "tool": 1,
+          "restoredExactly": true,
+          "archivedAllLines": true
+        }
+      ]
+    },
+    {
+      "id": "q07",
+      "eligible": true,
+      "gCompressedTools": 1,
+      "checks": [
+        {
+          "tool": 1,
+          "restoredExactly": true,
+          "archivedAllLines": true
+        }
+      ]
+    },
+    {
+      "id": "q08",
+      "eligible": true,
+      "gCompressedTools": 1,
+      "checks": [
+        {
+          "tool": 1,
+          "restoredExactly": true,
+          "archivedAllLines": true
+        }
+      ]
+    },
+    {
+      "id": "q09",
+      "eligible": true,
+      "gCompressedTools": 1,
+      "checks": [
+        {
+          "tool": 1,
+          "restoredExactly": true,
+          "archivedAllLines": true
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "eligible": true,
+      "gCompressedTools": 1,
+      "checks": [
+        {
+          "tool": 1,
+          "restoredExactly": true,
+          "archivedAllLines": true
+        }
+      ]
+    },
+    {
+      "id": "q11",
+      "eligible": true,
+      "gCompressedTools": 1,
+      "checks": [
+        {
+          "tool": 1,
+          "restoredExactly": true,
+          "archivedAllLines": true
+        }
+      ]
+    },
+    {
+      "id": "q12",
+      "eligible": true,
+      "gCompressedTools": 1,
+      "checks": [
+        {
+          "tool": 1,
+          "restoredExactly": true,
+          "archivedAllLines": true
+        }
+      ]
+    },
+    {
+      "id": "q13",
+      "eligible": false,
+      "gCompressedTools": 0,
+      "checks": []
+    },
+    {
+      "id": "q14",
+      "eligible": false,
+      "gCompressedTools": 0,
+      "checks": []
+    },
+    {
+      "id": "q15",
+      "eligible": false,
+      "gCompressedTools": 0,
+      "checks": []
+    },
+    {
+      "id": "q16",
+      "eligible": false,
+      "gCompressedTools": 0,
+      "checks": []
+    },
+    {
+      "id": "q17",
+      "eligible": false,
+      "gCompressedTools": 0,
+      "checks": []
+    },
+    {
+      "id": "q18",
+      "eligible": false,
+      "gCompressedTools": 0,
+      "checks": []
+    },
+    {
+      "id": "q19",
+      "eligible": false,
+      "gCompressedTools": 0,
+      "checks": []
+    },
+    {
+      "id": "q20",
+      "eligible": false,
+      "gCompressedTools": 0,
+      "checks": []
+    }
+  ]
+}
