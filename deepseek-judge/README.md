@@ -1,6 +1,6 @@
 # DeepSeek 独立裁判适配
 
-通过 `scripts/start-abcdg.mjs` 启动，不需要手工设置 `SIEVE_JUDGE_URL` 或临时令牌。
+通过 `scripts/start.mjs` 启动，不需要手工设置 `SIEVE_JUDGE_URL` 或临时令牌。
 
 本地鉴权接口将 Sieve 的 System One 问题转为 DeepSeek JSON 请求。主流程走 Messages，裁判走 Chat Completions；两者固定 `deepseek-flash`、关闭思考，所有请求共享持久化预算。只监听 `127.0.0.1` 的随机端口，认证令牌每个进程随机生成。
 
@@ -19,4 +19,4 @@
 
 价格估算按实验当时的公开费率；不等同于账户实际账单。未知用量保持按字节预留，不当作免费请求。请求失败不会自动增加预算。裁判失败时 Sieve 保留原文，主流程预算不足会停止。
 
-`pnpm test` 中的适配测试全部使用模拟网络和假密钥，不花 API 费用。原测试版本只调整了 YAML 依赖导入、凭据来源和默认账本路径，预算和判断转换逻辑保留。
+`core.mjs` 负责判断格式转换、答案验证和预算计算；`register.mjs` 负责凭据读取、本地接口和请求转发。`pnpm test` 中的适配测试全部使用模拟网络和假密钥，不花 API 费用。

@@ -6,7 +6,7 @@ import { fileURLToPath, pathToFileURL } from 'node:url';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const args = process.argv.slice(2);
 if (args.includes('--help')) {
-  console.log('Usage: node scripts/start-abcdg.mjs [--dsh-cli /path/to/dsh/bin.js] headless "question"\n       node scripts/start-abcdg.mjs [--dsh-cli /path/to/dsh/bin.js] web\nDSH_CLI can replace --dsh-cli. Run from your task workspace. See README.md.');
+  console.log('Usage: node scripts/start.mjs [--dsh-cli /path/to/dsh/bin.js] headless "question"\n       node scripts/start.mjs [--dsh-cli /path/to/dsh/bin.js] web\nDSH_CLI can replace --dsh-cli. Run from your task workspace. See README.md.');
   process.exit(0);
 }
 const cliFlag = args.indexOf('--dsh-cli');

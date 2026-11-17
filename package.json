@@ -2,7 +2,7 @@
   "name": "dsh-lowercost",
   "private": true,
   "type": "module",
-  "description": "ABCDG experimental fork of Sieve for DeepSeek Harness",
+  "description": "Context management and token cost control for DeepSeek Harness",
   "packageManager": "pnpm@11.21.0",
   "engines": {
     "node": "^22.19.0 || >=24.0.0"
@@ -11,6 +11,7 @@
     "build": "tsc -p packages/dsh-sieve/tsconfig.json && tsc -p packages/dsh-sieve-web/tsconfig.json && node scripts/build-client.mjs",
     "typecheck:plugin": "tsc -p packages/dsh-sieve/tsconfig.json --noEmit",
     "test": "node --test tests/lab.test.mjs tests/judge-cache.test.mjs tests/local-compression.test.mjs tests/line-templates.test.mjs deepseek-judge/core.test.mjs deepseek-judge/integration.test.mjs",
+    "start": "node scripts/start.mjs",
     "start:abcdg": "node scripts/start-abcdg.mjs",
     "verify:snapshot": "node scripts/verify-snapshot.mjs"
   },
